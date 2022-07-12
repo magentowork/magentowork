@@ -1,0 +1,414 @@
+magento download
+----------------------------------
+email:padmanaban.cmarix@gmail.com
+password:Cmarixtech@1234
+----------------------------------
+facebook developer account
+
+---------------------   
+id 6355155003
+pass bharat@123
+----------------------
+-----------------------
+terminal access
+sudo ssh ctpl185@192.168.1.187
+
+sudo ssh ctpl108@192.168.1.186
+-----------------------
+
+git hub
+------------------
+https://github.com/padmanaban1997/magento_intern
+--------------------------------------
+
+
+db import command line
+
+====================
+
+sudo mysql -u root -p komvosco_24_jan < komvosco_mage2_update_24_jan.sql
+
+sudo mysql -u root -p komvosco_24_jan < komvosco_new.sql
+sudo mysql -u root -p komvos_live < komvosco_mage2_update.sql
+komvos_live
+
+====================
+
+<--Magento 2 install via composer-->
+
+https://mirasvit.com/knowledge-base/how-to-install-magento-2-via-composer.html
+check php version magento version then start
+
+1)composer create-project --repository-url=https://repo.magento.com/magento/project-community-edition:2.4 . --prefer-dist --ignore-platform-reqs --no-interaction --dev
+
+composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition demo
+
+2)bin/magento setup:install \
+--base-url=http://localhost/fossil \
+--db-host=localhost \
+--db-name=fossil \
+--db-user=root \
+--db-password=root123 \
+--admin-firstname=pankaj \
+--admin-lastname=kalal \
+--admin-email=pankaj@admin.com \
+--admin-user=admin \
+--admin-password=admin@123 \
+--language=en_US \
+--currency=USD \
+--timezone=America/Chicago \ 
+--use-rewrites=1
+
+3) 
+---------------------------------------------------------
+---------------------------------------------------------
+sudo php bin/magento module:disable ManishJoy_CustomerLogin
+
+sudo php bin/magento module:disable Mageplaza_GoogleRecaptcha
+sudo php bin/magento module:disable Nwdthemes_Revslider
+sudo php bin/magento module:disable Cmarix_AddQuantity
+bin/magento cache:flush 
+
+sudo php bin/magento setup:upgrade
+sudo php bin/magento setup:db-schema:upgrade
+sudo php bin/magento setup:di:compile
+sudo php bin/magento setup:static-content:deploy -f
+sudo php bin/magento cache:clean
+sudo php bin/magento cache:flush
+sudo chmod -R 777 var/* pub/static/* generated/*
+sudo php bin/magento indexer:reindex
+sudo chown -Rf ctpl108:www-data ../komvos/
+sudo chown -Rf ctpl108:www-data ../komvos_live/
+sudo chown -Rf ctpl108:www-data ../m24/
+sudo chown -Rf ctpl108:www-data ../m23/
+elasticsearch install view_preprocessed
+service start:sudo -i service elasticsearch start
+mysql service :sudo service mysql start  
+--------------------------------------------------------	
+--------------------------------------------------------
+elasticsearch download---
+
+sudo apt-get install default-jre
+ 
+ sudo curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -\
+
+ echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.listdeb https://artifacts.elastic.co/packages/7.x/apt stable main
+sudo curl -fsSL https://artifacts.elastic.co/GPG-KEY-elasticsearch | sudo apt-key add -
+
+ echo "deb https://artifacts.elastic.co/packages/7.x/apt stable main" | sudo tee -a /etc/apt/sources.list.d/elastic-7.x.listdeb https://artifacts.elastic.co/packages/7.x/apt stable main
+-----------------------------------------------------------------
+-----------------------------------------------------------------
+magento install process without composer
+
+ sudo php bin/magento setup:install --base-url="http://127.0.0.1/demo1/" --db-host="localhost" --db-name="demo2" --db-user="root" --db-password="admin" --admin-firstname="test" --admin-lastname="test" --admin-email="pillai@gmail.com" --admin-user="pillai@1234" --admin-password="pillai@1234" --language="en_US" --currency="USD" --timezone="Asia/Kolkata" --use-rewrites="1" --backend-frontname="admin"
+--------------------------------------------------------------
+--------------------------------------------------------------
+sudo rm -rf var/di/* generated/* var/cache/* var/log/* var/page_cache/* var/session/* var/view_preprocessed/* pub/static/*
+
+padmanaban@1234
+padmanaban@1234
+
+sudo rm -rf var/view_preprocessed/* pub/static/*
+
+
+https://cheerymagicsoftware.github.io/post/mage-2-repositories-and-facktories/
+------------------------------------------------------------------
+
+ sudo php bin/magento setup:install --base-url="http://127.0.0.1/testmagentosetup/" --db-host="localhost" --db-name="testmagento240" --db-user="root" --db-password="admin" --admin-firstname="test" --admin-lastname="test" --admin-email="pillai@gmail.com" --admin-user="pillai@1234" --admin-password="padmanaban@1234" --language="en_US" --currency="USD" --timezone="Asia/Kolkata" --use-rewrites="1" --backend-frontname="admin"
+---------------------------------------------------------------------
+---------------------------------------------------------------------
+Change php Version from 7.0 to 7.2
+
+sudo a2dismod php7.0
+sudo a2enmod php7.2
+sudo systemctl restart apache2
+sudo update-alternatives --set php /usr/bin/php7.2
+sudo update-alternatives --set php /usr/bin/php7.4
+ sudo service apache2 restart
+ sudo service apache2 status
+
+php -i | grep "Loaded Configuration"
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+sudo php bin/magento maintenance:enable
+sudo composer update -vvv
+sudo composer install -vvv
+sudo php bin/magento maintenance:disable
+
+----------------------------------------------------------------------
+----------------------------------------------------------------------
+php bin/magento setup:install --base-url="http://127.0.0.1/m23/" --db-host="localhost" --db-name="magentonew23" --db-user="root" --db-password="admin" --admin-firstname="raj" --admin-lastname="pillai" --admin-email="test@gmail.com" --admin-user="admin" --admin-password="admin123" --language="en_US" --currency="USD" --timezone="America/Chicago" --use-rewrites="1" --backend-frontname="admin"
+
+-------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
+
+php bin/magento setup:install --base-url="http://127.0.0.1/m23/" --db-host="localhost" --db-name="magentonew23" --db-user="root" --db-password="admin" --admin-firstname="test" --admin-lastname="test" --admin-email="test@gmail.com" --admin-user="admin" --admin-password="admin123" --language="en_US" --currency="USD" --timezone="America/Chicago" --use-rewrites="1" --backend-frontname="admin" --elasticsearch-host=127.0.0.1
+
+
+--------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------
+
+
+php bin/magento setup:install --base-url="http://127.0.0.1/m243/" --db-host="localhost" --db-name="magentonew243" --db-user="root" --db-password="admin" --admin-firstname="test" --admin-lastname="test" --admin-email="padmanaban.cmarix@gmail.com" --admin-user="admin" --admin-password="admin123" --language="en_US" --currency="USD" --timezone="America/Chicago" --use-rewrites="1" --backend-frontname="admin" --elasticsearch-host=127.0.0.1
+
+
+
+php bin/magento setup:install --base-url="http://127.0.0.1/mage/" --db-host="localhost" --db-name="mage" --db-user="root" --db-password="admin" --admin-firstname="test" --admin-lastname="test" --admin-email="test@gmail.com" --admin-user="admin" --admin-password="admin123" --language="en_US" --currency="USD" --timezone="America/Chicago" --use-rewrites="1" --backend-frontname="admin" --elasticsearch-host=127.0.0.1
+
+
+https://www.truecodex.com/course/magento-2/how-to-add-custom-field-in-magento-2-registration-form
+
+
+https://shopify.github.io/liquid-code-examples/example/featured-blog-posts
+
+https://shopify.github.io/liquid-code-examples/
+
+php bin/magento admin:user:create --admin-user="admin" --admin-firstname="Admin" --admin-lastname="A" --admin-email="admin@gmail.com.com" --admin-password="admin@5252"
+
+php bin/magento admin:user:unlock admin
+
+==========================================================
+
+create virtual host
+
+/etc/apache2/sites-available/000-default.conf
+/etc/hosts
+===========================================================
+
+
+Komvos detail
+
+http://203.109.113.157/komvos/
+
+http://203.109.113.157/komvos/admin_kom
+test
+test@1234
+
+SSH details
+ssh admin@203.109.113.157
+Fire$t0ne@123
+
+
+
+
+
+
+php bin/magento admin:user:create --admin-user=test --admin-password=test@123 --admin-email=test123@gmail.com --admin-firstname=cmarix --admin-lastname=test
+
+
+
+
+composer require cin7/apiextension
+
+
+
+php bin/magento setup:install --base-url="http://127.0.0.1/mage235/" --db-host="localhost" --db-name="mage235" --db-user="root" --db-password="admin" --admin-firstname="raj" --admin-lastname="pillai" --admin-email="test@gmail.com" --admin-user="admin" --admin-password="admin123" --language="en_US" --currency="USD" --timezone="America/Chicago" --use-rewrites="1" --backend-frontname="admin"
+
+
+/////////////////////////////////////  New Install Process ///////////////////////////////////////////////////////////////////////////////////
+
+
+
+Install magento via command line
+
+Ref : https://www.thecoachsmb.com/how-to-install-magento-2-on-ubuntu/
+
+
+step 1:
+
+go to html foler and run the command
+
+sudo composer create-project --repository-url=https://repo.magento.com/ magento/project-community-edition:2.4.3 magento243
+
+Note: magento2 is a folder name, it created after run command
+
+------------------------------------------
+
+step 2:
+
+Set file permissions
+
+
+cd /var/www/html/<magento install directory>
+
+sudo find var generated vendor pub/static pub/media app/etc -type f -exec chmod g+w {} +
+sudo find var generated vendor pub/static pub/media app/etc -type d -exec chmod g+ws {} +
+sudo chown -R user_name:www-data .
+sudo chmod u+x bin/magento
+
+
+Note: sudo chown -R user_name:www-data . => user_name is the user with root access
+
+
+----------------------------------------------
+
+step 3:
+
+
+Go to Magento 2 install directory
+
+cd /var/www/html/<magento install directory>
+
+Run the command...
+
+
+sudo php bin/magento setup:install --base-url=<your-domain> --db-host=localhost --db-name=magento2 --db-user=magento2 --db-password=<your-db-password-of-magento2-user> --admin-firstname=Admin --admin-lastname=Admin --admin-email=admin@admin.com --admin-user=admin --admin-password=<your-admin-password> --language=en_US --currency=USD --timezone=America/Chicago --backend-frontname=admin --use-rewrites=1 --search-engine=elasticsearch7 --elasticsearch-host=localhost --elasticsearch-port=9200
+
+
+EXAMPLE:
+
+sudo php bin/magento setup:install --base-url=http://192.168.1.186/magento243/ --db-host=localhost --db-name=magento243 --db-user=root --db-password=admin --admin-firstname=padmanaban --admin-lastname=Cmarix --admin-email=padmanaban.cmarix@gmail.com --admin-user=test --admin-password=test@123 --language=en_US --currency=USD --timezone=America/Chicago --backend-frontname=admin --use-rewrites=1
+
+
+
+
+
+
+----------------------------------------------
+
+step 4:
+
+Run to magento command
+
+
+sudo php bin/magento indexer:reindex
+sudo php bin/magento setup:upgrade
+sudo php bin/magento setup:di:compile
+sudo php bin/magento setup:static-content:deploy -f
+sudo php bin/magento cache:clean
+sudo php bin/magento cache:flush
+sudo chmod -R 777 var pub/static generated
+
+------------------------------------------------------
+
+Step 5:
+
+
+Change DocumentRoot To Pub
+
+Create Virtual Host
+
+/etc/apache2/sites-available/000-default.conf
+
+
+<VirtualHost *:80>
+ServerAdmin webmaster@localhost
+DocumentRoot /var/www/html/magento2/pub
+ServerName sonal.magento.com
+ErrorLog ${APACHE_LOG_DIR}/error.log
+CustomLog ${APACHE_LOG_DIR}/access.log combined
+<Directory "/var/www/html">
+AllowOverride all
+</Directory>
+</VirtualHost>
+
+
+Add entry to host file
+
+/etc/hosts
+
+192.168.1.187 mage.bharat.local
+
+
+
+Restart Apache for the changes to take effect:
+
+sudo systemctl restart apache2
+
+
+______________________________________________________
+
+Troubleshoot admin login authentication error
+
+Disable the Two FactorAuth run the command
+
+sudo php bin/magento module:disable Magento_TwoFactorAuth
+
+sudo php bin/magento module:disable Magento_Customer
+
+sudo php bin/magento module:enable Yireo_Webp2 Yireo_NextGenImages
+
+sudo php bin/magento module:disable Yireo_Webp2 Yireo_NextGenImages
+
+---------------------------------------------------------------
+Trello details
+
+
+https://trello.com/b/iXeFYwrH/komvos
+
+arti.cmarix@gmail.com
+@rti@7567646445
+
+
+
+
+
+composer require mageplaza/module-core
+
+composer require mageplaza/module-facebook-plugin
+
+
+-----------------------------------------------------------------------------
+
+&&&&&&--Live--&&&&&&&
+
+http://komvos.com/admin_kom
+Username: admin
+Password: Komvo$(22)
+New Password : Komvo$(222)
+New Password : Komvo$(2222)
+
+
+
+
+
+IP Address: 91.197.230.219
+Port: 22007
+Username: komvosco
+Password: komvos@2019
+
+ssh komvosco@91.197.230.219 -p 22007
+
+
+Root : /home/komvosco/public_html
+
+
+Live Command
+
+php bin/magento setup:upgrade
+php bin/magento setup:di:compile
+php bin/magento setup:static-content:deploy -f
+php bin/magento cache:flush
+
+
+__________________________
+
+|CPanel - Server Support - Tickets|
+=---------------------------------=
+https://my.kualo.com/
+Username: mailto:frank_misir@hotmail.com
+Password:                                                                                                                                       
+
+----------------------------
+Magento marketplace Key
+
+Public Key: 95f4f336f76ea54bc5f2ce872332802e
+Private Key: c4158ff518f1285e95a609212f07bffd
+
+
+-------------------------
+php extensions
+
+sudo apt-get install php7.4-gd php7.4-mcrypt php7.4-curl php7.4-intl php7.4-xsl php7.4-mbstring php7.4-openssl php7.4-zip php7.4-soap php7.4-bcmath
+
+
+
+Please use these 
+
+Userid: mailto:mrsdeeptibansal@gmail.com
+password: Synergytest123!
+
+
+
+http://203.109.113.157/komvos/
