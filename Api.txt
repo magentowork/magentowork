@@ -1,0 +1,62 @@
+API Doc
+
+Cross Orgin Error fixed
+https://magento.stackexchange.com/questions/287239/how-to-enable-cors-to-access-magento-rest-apis-magento2
+
+Note: need to install module in magento.
+
+========
+
+
+/*call magento API in react*/
+
+fetch("http://192.168.1.187/mage235/rest/all/V1/products?searchCriteria[currentPage]=0",{ 
+  headers: {
+   'Authorization': 'Bearer qm4w8pgzhfl2e74d943t9r1x5uvbd31t' 
+  }
+}) 
+
+  .then(res => res.json())
+  .then(
+    (result) => {
+      console.log(result);
+      //debugger;
+    },
+    
+    (error) => {
+      console.log(error);
+      //debugger;
+    }
+  )
+
+/*end call magento API*/
+
+++++++++++++++++++++++++++++++++++++++++++++++++++
+
+Prodocut Working
+
+http://192.168.1.187/mage235/rest/all/V1/products?searchCriteria[currentPage]=0
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+search working
+
+http://192.168.1.187/mage235/rest/V1/products?searchCriteria[filter_groups][0][filters][0][field]=name&searchCriteria[filter_groups][0][filters][0][value]=bharat
+
+
+http://192.168.1.187/mage235/rest/V1/products?searchCriteria[filter_groups][0][filters][0][field]=name&searchCriteria[filter_groups][0][filters][0][value]=%test%&searchCriteria[filter_groups][0][filters][0][condition_type]=like
+
+
+search woking with %keyword%
+
+http://192.168.1.187/mage235/rest/V1/products?searchCriteria[filter_groups][0][filters][0][field]=name&searchCriteria[filter_groups][0][filters][0][value]=%test%&searchCriteria[filter_groups][0][filters][0][condition_type]=like&fields=items[sku,name]
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+
+
+
+
+
+++++++++++++++++++++++++++++++++++++++++++++++++
+
